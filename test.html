@@ -2,9 +2,136 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<title>CanvasApi</title>
 </head>
-
+<style>
+	body{ background:#ccc;}
+	canvas{ background:#fff; font-family: "微软雅黑"; font-size: 20px; color:"#f00";text-align: center}
+</style>
 <body>
+	<canvas id="canvas" width="400" height="400"><canvas>
 </body>
+<script>
+
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	//ctx.moveTo(100,100);
+	//ctx.lineTo(200,200);
+	//ctx.stroke();
+	
+	//ctx.rect(5.5,5.5,100,100);
+	//ctx.stroke();
+	
+	//ctx.font = "italic bold 40px 微软雅黑";
+	//ctx.textBaseline = "hanging";
+	//ctx.fillStyle = 'red';
+	//ctx.fillText('a你想对我说什么',0,0);
+	
+	//ctx.moveTo(50,50);
+//	ctx.lineTo(100,100);
+//	ctx.lineTo(50,100);
+//	ctx.lineTo(50,50);
+//	ctx.stroke();
+	
+	
+	//ctx.beginPath();
+//	ctx.strokeStyle = 'red';
+//	ctx.moveTo(50,50);
+//	ctx.lineTo(100,100);
+//	ctx.lineTo(50,100);
+//	ctx.closePath();
+//	ctx.stroke();
+	
+	
+	//var timer = null ;
+//	var num = 1;
+//	ctx.moveTo(150,50);
+//	ctx.strokeStyle = 'gold';
+//	timer = setInterval(function (){
+//				
+//		if( num >= 100){
+//		
+//			clearInterval(timer);
+//			num = 1;
+//		}else{
+//			
+//			num++;
+//			
+//		}
+//		ctx.lineTo(150,100+num*2);
+//		ctx.lineWidth = num;
+//		ctx.stroke();			
+//				
+//				},100);
+	
+	
+	// ctx.beginPath();
+	//ctx.arc(80,100,50,0,180*Math.PI/180,false);
+	//ctx.closePath();
+	//ctx.stroke();
+	
+	//ctx.arc(150,150,50,0,360*Math.PI/180,false);
+	//ctx.fill();
+	
+	//ctx.arc(100,100,100,0,90*Math.PI/180,false);
+	//ctx.stroke();
+	
+	//ctx.beginPath();
+	//ctx.moveTo(103,103);
+	//ctx.arcTo(183,83,162,182,40);
+	//ctx.stroke();
+	
+	//二次贝塞尔曲线
+	//ctx.moveTo(50,50);
+	//ctx.quadraticCurveTo(70,120,200,80);
+	//ctx.stroke();
+	
+	
+	//三次贝塞尔曲线
+	
+	//正弦图
+	
+	//ctx.beginPath();
+	//ctx.moveTo(20,150);
+	//ctx.bezierCurveTo(20,50,150,50,150,150);
+	//ctx.stroke();
+	//ctx.beginPath();
+	//ctx.moveTo(150,150);
+	//ctx.bezierCurveTo(150,250,280,250,280,150);
+	//ctx.stroke();
+	
+	//var line = ctx.createLinearGradient(50,50,200,50);
+	//line.addColorStop(0,'red');
+	//line.addColorStop(0.2,'#0f0');
+	//line.addColorStop(0.5,'rgb(51,102,255)');
+	//line.addColorStop(1,'rgba(204,255,0,0.8)');
+	//ctx.fillStyle = line;
+	//ctx.fillRect(50,50,200,50);
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.globalAlpha = 0.1;
+	ctx.fillStyle = "red";
+	ctx.fillRect(50,50,100,100);
+	ctx.closePath();
+	ctx.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.globalAlpha = 0.5;
+	ctx.fillStyle = "green";
+	ctx.fillRect(100,100,100,100);
+	ctx.closePath();
+	ctx.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.globalAlpha = 0.5;
+	ctx.fillStyle = "blue";
+	ctx.fillRect(150,150,100,100);
+	ctx.closePath();
+	ctx.restore();
+	
+	
+</script>
 </html>
